@@ -3,22 +3,10 @@ const HOME_PADDING = { top: 96, bottom: 96, left: 42, right: 42 };
 const DEM_TILES = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png";
 const DEM_BOUNDS = [73, 17, 135, 54];
 
-const TYPE_LABEL = {
-  origin: "故乡",
-  office: "仕宦",
-  exile: "贬谪",
-  final: "归途"
-};
-
-const TYPE_COLOR = {
-  origin: "#296c67",
-  office: "#8f5d14",
-  exile: "#9c2f1b",
-  final: "#5f4d86"
-};
-
 let points = [];
 let markers = [];
+let journeys = {};
+let activeJourney = null;
 let activeIndex = 0;
 let currentFilter = "all";
 let globeOn = true;
@@ -231,7 +219,20 @@ function makeRoute() {
   };
 }
 
-function addJourneyLayers() {
+function typeLabel(type) {
+  return activeJourney.types[type]?.label || type;
+}
+
+function typeColor(type) {
+  return activeJourney.types[type]?.color || "#9c2f1b";
+}
+
+function clearMarkers() {
+  markers.forEach(({ marker }) => marker.remove());
+  markers = [];
+}
+
+function addRouteLayer() {
   map.addSource("journey-route", { type: "geojson", data: makeRoute() });
   map.addLayer({
     id: "journey-route",
@@ -245,17 +246,42 @@ function addJourneyLayers() {
       "line-dasharray": [2, 2]
     }
   });
+}
 
+function renderMarkers() {
+  clearMarkers();
   points.forEach((point, index) => {
     const el = document.createElement("button");
     el.className = `journey-marker type-${point.type}`;
     el.type = "button";
     el.setAttribute("aria-label", `查看${point.name}`);
     el.dataset.type = point.type;
-    el.innerHTML = `<span class="flag" style="background:${TYPE_COLOR[point.type]}"><span class="seal">苏</span><span class="name">${point.short}</span></span><span class="pole" style="background:${TYPE_COLOR[point.type]}"></span><span class="dot" style="background:${TYPE_COLOR[point.type]}"></span>`;
+    el.innerHTML = `<span class="flag" style="background:${typeColor(point.type)}"><span class="seal">${activeJourney.seal}</span><span class="name">${point.short}</span></span><span class="pole" style="background:${typeColor(point.type)}"></span><span class="dot" style="background:${typeColor(point.type)}"></span>`;
     el.addEventListener("click", () => selectPoint(index, true));
     const marker = new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat(point.lnglat).addTo(map);
     markers.push({ point, marker, el });
+  });
+}
+
+function renderTitle() {
+  document.title = `${activeJourney.heading} | 山河叙事地图`;
+  document.getElementById("titleKicker").textContent = activeJourney.kicker;
+  document.getElementById("titleHeading").textContent = activeJourney.heading;
+  document.getElementById("titleSubtitle").textContent = activeJourney.subtitle;
+  document.getElementById("searchInput").placeholder = activeJourney.searchPlaceholder;
+}
+
+function renderFilters() {
+  const filters = document.getElementById("filters");
+  const buttons = [
+    `<button class="filter on" type="button" data-filter="all">全部</button>`,
+    ...Object.entries(activeJourney.types).map(([type, meta]) => (
+      `<button class="filter" type="button" data-filter="${type}">${meta.label}</button>`
+    ))
+  ];
+  filters.innerHTML = buttons.join("");
+  filters.querySelectorAll(".filter").forEach((button) => {
+    button.addEventListener("click", () => updateFilter(button.dataset.filter));
   });
 }
 
@@ -266,7 +292,7 @@ function renderTimeline() {
       <time>${point.years.split("-")[0]}</time>
       <div>
         <b>${point.name}</b>
-        <span>${TYPE_LABEL[point.type]} · ${point.works[0] || "生平节点"}</span>
+        <span>${typeLabel(point.type)} · ${point.works[0] || "生平节点"}</span>
       </div>
     </li>
   `).join("");
@@ -297,7 +323,7 @@ function selectPoint(index, fly) {
   activeIndex = (index + points.length) % points.length;
   const point = points[activeIndex];
   document.getElementById("storyYears").textContent = point.years;
-  document.getElementById("storyTitle").textContent = `${point.name} · ${TYPE_LABEL[point.type]}`;
+  document.getElementById("storyTitle").textContent = `${point.name} · ${typeLabel(point.type)}`;
   document.getElementById("storyText").textContent = point.summary;
   document.getElementById("storyWorks").innerHTML = point.works.map((work) => `<span>${work}</span>`).join("");
   document.getElementById("storyQuote").textContent = point.quote;
@@ -365,7 +391,7 @@ function startTour() {
 }
 
 function searchableText(point) {
-  return [point.name, point.short, point.years, TYPE_LABEL[point.type], point.summary, point.quote, ...point.works]
+  return [point.name, point.short, point.years, typeLabel(point.type), point.summary, point.quote, ...point.works]
     .join(" ")
     .toLowerCase();
 }
@@ -391,7 +417,7 @@ function renderSearchResults(query) {
   panel.innerHTML = matches.map(({ point, index }) => `
     <button type="button" data-index="${index}">
       <b>${point.name}</b>
-      <span>${TYPE_LABEL[point.type]} · ${point.works.join(" / ")}</span>
+      <span>${typeLabel(point.type)} · ${point.works.join(" / ")}</span>
     </button>
   `).join("");
   panel.querySelectorAll("button").forEach((button) => {
@@ -402,6 +428,29 @@ function renderSearchResults(query) {
       panel.hidden = true;
     });
   });
+}
+
+function setJourney(journeyId, flyHome = true) {
+  const nextJourney = journeys[journeyId];
+  if (!nextJourney || activeJourney?.id === journeyId) return;
+  stopTour();
+  activeJourney = nextJourney;
+  points = nextJourney.points;
+  activeIndex = 0;
+  currentFilter = "all";
+  document.getElementById("searchInput").value = "";
+  renderSearchResults("");
+  renderTitle();
+  renderFilters();
+  renderMarkers();
+  map.getSource("journey-route").setData(makeRoute());
+  renderTimeline();
+  document.querySelectorAll(".person-tab").forEach((button) => {
+    button.classList.toggle("on", button.dataset.journey === journeyId);
+  });
+  updateFilter("all");
+  selectPoint(0, false);
+  if (flyHome) fitHome();
 }
 
 function wireControls() {
@@ -444,8 +493,8 @@ function wireControls() {
     const search = document.querySelector(".search");
     if (!search.contains(event.target)) document.getElementById("searchResults").hidden = true;
   });
-  document.querySelectorAll(".filter").forEach((button) => {
-    button.addEventListener("click", () => updateFilter(button.dataset.filter));
+  document.querySelectorAll(".person-tab").forEach((button) => {
+    button.addEventListener("click", () => setJourney(button.dataset.journey));
   });
   map.on("zoom", () => {
     const showFlags = map.getZoom() >= 4.4;
@@ -499,14 +548,22 @@ map.on("load", async () => {
       getJson("geo/china-outline.json"),
       getJson("geo/ne_50m_rivers_cn.json"),
       getJson("geo/ne_50m_lakes_cn.json"),
-      getJson("data/sushi-journey.json")
+      Promise.all([
+        getJson("data/sushi-journey.json"),
+        getJson("data/libai-journey.json")
+      ])
     ]);
-    points = journey.points;
+    journeys = Object.fromEntries(journey.map((item) => [item.id, item]));
+    activeJourney = journeys.sushi;
+    points = activeJourney.points;
     addChinaLayers(china);
     addMask(outline);
     addWater(rivers, lakes);
     addTerrainSources();
-    addJourneyLayers();
+    addRouteLayer();
+    renderTitle();
+    renderFilters();
+    renderMarkers();
     renderTimeline();
     wireControls();
     drawMist();

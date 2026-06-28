@@ -237,6 +237,47 @@ button {
   backdrop-filter: blur(10px);
 }
 
+.person-switch {
+  position: absolute;
+  left: 50%;
+  bottom: 82px;
+  z-index: 8;
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  transform: translateX(-50%);
+  border: 1px solid var(--gold-soft);
+  border-radius: 999px;
+  background: rgba(246, 236, 214, .82);
+  box-shadow: 0 6px 16px rgba(69, 48, 20, .18);
+  backdrop-filter: blur(10px);
+}
+
+.person-tab {
+  min-width: 72px;
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid rgba(189, 154, 85, .38);
+  border-radius: 999px;
+  background: rgba(252, 246, 230, .96);
+  color: #5e4725;
+  font: 700 14px/1 "Kaiti SC", "STKaiti", "KaiTi", serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color .18s ease, background .18s ease, transform .18s ease;
+}
+
+.person-tab:hover {
+  transform: translateY(-1px);
+  color: var(--ink);
+}
+
+.person-tab.on {
+  border-color: #862916;
+  background: linear-gradient(180deg, #a43b24, #862916);
+  color: #f8ead2;
+}
+
 .filter {
   min-width: 68px;
   height: 36px;
@@ -554,19 +595,24 @@ button {
   .timeline {
     right: 12px;
     top: auto;
-    bottom: 92px;
+    bottom: 132px;
     width: calc(100vw - 24px);
-    max-height: 150px;
+    max-height: 128px;
   }
   .story {
     left: 12px;
-    bottom: 254px;
+    bottom: 278px;
     width: calc(100vw - 24px);
   }
   .filters {
+    bottom: 20px;
     overflow-x: auto;
     justify-content: flex-start;
     width: calc(100vw - 24px);
+  }
+  .person-switch {
+    bottom: 78px;
+    max-width: calc(100vw - 24px);
   }
 }
 
@@ -585,7 +631,7 @@ button {
     top: 64px;
   }
   .story {
-    bottom: 236px;
+    bottom: 272px;
     padding: 13px 14px;
   }
   .story blockquote {

@@ -1,5 +1,30 @@
 {
+  "id": "sushi",
   "title": "东坡行旅",
+  "heading": "东坡行旅图",
+  "kicker": "真实山河 · 文学行旅 · 可漫游叙事地图",
+  "subtitle": "从眉山到儋州，把苏轼的一生落回山川与江河",
+  "seal": "苏",
+  "searchPlaceholder": "黄州、赤壁赋、荔枝",
+  "loaderText": "正在载入中国边界、水系与东坡行旅节点",
+  "types": {
+    "origin": {
+      "label": "故乡",
+      "color": "#296c67"
+    },
+    "office": {
+      "label": "仕宦",
+      "color": "#8f5d14"
+    },
+    "exile": {
+      "label": "贬谪",
+      "color": "#9c2f1b"
+    },
+    "final": {
+      "label": "归途",
+      "color": "#5f4d86"
+    }
+  },
   "points": [
     {
       "id": "meishan",

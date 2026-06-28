@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>东坡行旅图 | 山河叙事地图</title>
-  <meta name="description" content="用真实中国山河地图讲述苏轼一生行旅、作品与心境。">
+  <title>山河行旅图 | 文学叙事地图</title>
+  <meta name="description" content="用真实中国山河地图讲述诗人的行旅、作品与心境。">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="vendor/maplibre-gl.css">
   <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
   <main id="app">
-    <div id="map" aria-label="苏轼生平山河地图"></div>
+    <div id="map" aria-label="诗人生平山河地图"></div>
     <div class="paper"></div>
     <div class="vignette"></div>
     <canvas id="mist"></canvas>
 
     <header class="titlebar">
-      <p>真实山河 · 文学行旅 · 可漫游叙事地图</p>
-      <h1>东坡行旅图</h1>
-      <p>从眉山到儋州，把苏轼的一生落回山川与江河</p>
+      <p id="titleKicker">真实山河 · 文学行旅 · 可漫游叙事地图</p>
+      <h1 id="titleHeading">东坡行旅图</h1>
+      <p id="titleSubtitle">从眉山到儋州，把苏轼的一生落回山川与江河</p>
     </header>
 
     <nav class="toolbar" aria-label="地图工具">
@@ -38,12 +38,12 @@
       <div id="searchResults" class="search-results" hidden></div>
     </section>
 
-    <section class="filters" aria-label="筛选">
-      <button class="filter on" type="button" data-filter="all">全部</button>
-      <button class="filter" type="button" data-filter="origin">故乡</button>
-      <button class="filter" type="button" data-filter="office">仕宦</button>
-      <button class="filter" type="button" data-filter="exile">贬谪</button>
-      <button class="filter" type="button" data-filter="final">归途</button>
+    <section id="personSwitch" class="person-switch" aria-label="选择诗人">
+      <button class="person-tab on" type="button" data-journey="sushi">东坡</button>
+      <button class="person-tab" type="button" data-journey="libai">太白</button>
+    </section>
+
+    <section id="filters" class="filters" aria-label="筛选">
     </section>
 
     <aside class="story" aria-live="polite">
@@ -64,7 +64,7 @@
       </div>
     </aside>
 
-    <ol id="timeline" class="timeline" aria-label="苏轼生平时间线"></ol>
+    <ol id="timeline" class="timeline" aria-label="诗人生平时间线"></ol>
 
     <div id="loader" class="loader">
       <div>
