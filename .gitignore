@@ -5,3 +5,4 @@ node_modules/
 tmp-*.png
 __pycache__/
 *.pyc
+.vercel
