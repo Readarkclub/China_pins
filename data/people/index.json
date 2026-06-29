@@ -24,6 +24,22 @@
       "era": "蒙古帝国",
       "region": "欧亚",
       "path": "data/genghis-journey.json"
+    },
+    {
+      "id": "wu-zixu",
+      "label": "复楚",
+      "name": "伍子胥",
+      "era": "春秋",
+      "region": "吴楚",
+      "path": "data/wu-zixu-journey.json"
+    },
+    {
+      "id": "wuyue",
+      "label": "吴越",
+      "name": "钱氏吴越",
+      "era": "五代十国",
+      "region": "两浙",
+      "path": "data/wuyue-journey.json"
     }
   ]
 }
