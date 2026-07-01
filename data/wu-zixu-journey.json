@@ -41,6 +41,11 @@
       "summary": "伍子胥本为楚国人。父兄因楚平王一案被杀后，他从楚国政治中心出奔，复仇叙事由此开始。",
       "quote": "家国之祸，把一个楚臣推向吴楚边界之外。",
       "works": ["楚平王之难", "父兄被杀"],
+      "image": {
+        "src": "assets/story/wu-zixu/ying-before.webp",
+        "alt": "郢都历史故事插图",
+        "caption": "郢都 · 楚平王之难"
+      },
       "importance": 5
     },
     {
@@ -53,6 +58,11 @@
       "summary": "传说伍子胥逃亡途中经过昭关，重重盘查使他几乎无法东出。后世“一夜白头”的故事，凝成流亡的精神地标。",
       "quote": "关门一线之间，是逃亡者的生死，也是复仇者的起点。",
       "works": ["昭关传说", "出楚入吴"],
+      "image": {
+        "src": "assets/story/wu-zixu/zhaoguan.webp",
+        "alt": "昭关历史故事插图",
+        "caption": "昭关 · 昭关传说"
+      },
       "importance": 5
     },
     {
@@ -65,6 +75,11 @@
       "summary": "伍子胥入吴后成为重要谋臣，辅佐公子光经营吴国政治，为后来吴国转向强势扩张打下基础。",
       "quote": "流亡者在太湖之滨重新获得位置，也把吴国推向春秋舞台中央。",
       "works": ["入吴辅政", "公子光"],
+      "image": {
+        "src": "assets/story/wu-zixu/gusu-arrival.webp",
+        "alt": "姑苏历史故事插图",
+        "caption": "姑苏 · 入吴辅政"
+      },
       "importance": 5
     },
     {
@@ -77,6 +92,11 @@
       "summary": "公子光夺位成为吴王阖闾。伍子胥在吴国决策层中的地位上升，吴楚战争的长期准备进入关键阶段。",
       "quote": "个人复仇与国家战略，在吴王阖闾时代合流。",
       "works": ["阖闾即位", "吴国强盛"],
+      "image": {
+        "src": "assets/story/wu-zixu/gusu-helu.webp",
+        "alt": "吴都历史故事插图",
+        "caption": "吴都 · 阖闾即位"
+      },
       "importance": 4
     },
     {
@@ -89,6 +109,11 @@
       "summary": "吴军联合蔡、唐，在柏举击败楚军主力。伍子胥随吴军西进，吴楚力量对比出现决定性转折。",
       "quote": "五战入郢之前，柏举先把楚国的门户击开。",
       "works": ["柏举之战", "吴楚战争"],
+      "image": {
+        "src": "assets/story/wu-zixu/boju.webp",
+        "alt": "柏举历史故事插图",
+        "caption": "柏举 · 柏举之战"
+      },
       "importance": 5
     },
     {
@@ -101,6 +126,11 @@
       "summary": "吴军攻入楚都郢。伍子胥终于回到昔日伤痛的中心，复仇也由私人怨恨变成改变春秋格局的大事件。",
       "quote": "日暮途远，倒行逆施。",
       "works": ["攻入郢都", "复仇完成"],
+      "image": {
+        "src": "assets/story/wu-zixu/ying-enter.webp",
+        "alt": "入郢历史故事插图",
+        "caption": "入郢 · 攻入郢都"
+      },
       "importance": 5
     },
     {
@@ -113,6 +143,11 @@
       "summary": "吴越交锋中，吴王阖闾在槜李受伤后去世，夫差继位。伍子胥的政治命运随吴越关系转入新阶段。",
       "quote": "吴国的锋芒转向越国，旧谋臣开始面对新君主。",
       "works": ["槜李之战", "夫差继位"],
+      "image": {
+        "src": "assets/story/wu-zixu/zuili.webp",
+        "alt": "槜李历史故事插图",
+        "caption": "槜李 · 槜李之战"
+      },
       "importance": 4
     },
     {
@@ -125,6 +160,11 @@
       "summary": "吴军在夫椒击败越国。伍子胥主张趁势灭越，但夫差最终接受越王勾践求和，吴国留下后患。",
       "quote": "胜利之后最难的不是追击，而是判断该不该停手。",
       "works": ["夫椒之战", "劝灭越国"],
+      "image": {
+        "src": "assets/story/wu-zixu/fujiao.webp",
+        "alt": "夫椒历史故事插图",
+        "caption": "夫椒 · 夫椒之战"
+      },
       "importance": 4
     },
     {
@@ -137,6 +177,11 @@
       "summary": "伍子胥因屡谏夫差、遭伯嚭谗毁而被赐死。他临终仍预言越国终将攻破吴都，个人悲剧也照见吴国覆亡的伏线。",
       "quote": "请置吾目于吴东门，以观越兵入吴。",
       "works": ["夫差赐死", "吴亡伏线"],
+      "image": {
+        "src": "assets/story/wu-zixu/gusu-death.webp",
+        "alt": "姑苏历史故事插图",
+        "caption": "姑苏 · 夫差赐死"
+      },
       "importance": 5
     }
   ]

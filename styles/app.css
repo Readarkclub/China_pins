@@ -228,10 +228,13 @@ button {
 .story {
   position: absolute;
   left: 24px;
-  bottom: 104px;
+  top: 176px;
+  bottom: auto;
   z-index: 8;
   width: 318px;
   max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 200px);
+  overflow: auto;
   padding: 16px 18px 18px;
   border: 1px solid var(--gold-soft);
   border-radius: 12px;
@@ -279,6 +282,45 @@ button {
   background: rgba(156, 47, 27, .07);
   color: #7d3a24;
   font: 700 12px/1.4 "Kaiti SC", "STKaiti", "KaiTi", serif;
+}
+
+.story-image {
+  position: relative;
+  margin: 12px 0 10px;
+  overflow: hidden;
+  border: 1px solid rgba(189, 154, 85, .34);
+  border-radius: 8px;
+  background: rgba(238, 224, 193, .58);
+  box-shadow: inset 0 0 0 1px rgba(255, 250, 238, .34);
+}
+
+.story-image[hidden] {
+  display: none;
+}
+
+.story-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.story-image figcaption {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  max-width: calc(100% - 16px);
+  padding: 3px 7px;
+  border: 1px solid rgba(255, 250, 238, .38);
+  border-radius: 999px;
+  background: rgba(54, 36, 19, .62);
+  color: #fff2d8;
+  font: 700 11px/1.4 "Kaiti SC", "STKaiti", "KaiTi", serif;
+  letter-spacing: 0;
+}
+
+.story-image figcaption[hidden] {
+  display: none;
 }
 
 .story blockquote {
@@ -662,9 +704,12 @@ button {
     max-height: 128px;
   }
   .story {
+    top: auto;
     left: 12px;
     bottom: 278px;
     width: calc(100vw - 24px);
+    max-height: 360px;
+    overflow: auto;
   }
 }
 
@@ -681,6 +726,13 @@ button {
   .story {
     bottom: 272px;
     padding: 13px 14px;
+    max-height: 356px;
+  }
+  .story-image {
+    margin: 10px 0 9px;
+  }
+  .story-image img {
+    aspect-ratio: 2 / 1;
   }
   .story blockquote {
     margin: 9px 0 11px;

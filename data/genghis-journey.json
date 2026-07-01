@@ -40,6 +40,11 @@
       "summary": "铁木真出生于蒙古高原东北部的肯特山与斡难河一带。这里是部族纷争、血缘盟誓与草原政治的起点。",
       "quote": "从寒冷草原出发，命运先给他的不是帝国，而是失怙、流亡与求生。",
       "works": ["少年铁木真", "斡难河流域"],
+      "image": {
+        "src": "assets/story/genghis/khentii.webp",
+        "alt": "肯特山历史故事插图",
+        "caption": "肯特山 · 少年铁木真"
+      },
       "importance": 5
     },
     {
@@ -52,6 +57,11 @@
       "summary": "1206 年，诸部大会推举铁木真为成吉思汗。松散部族被重新编入千户、万户，草原战争机器由此成形。",
       "quote": "草原不再只是部族的边界，而成为一个帝国的起点。",
       "works": ["忽里勒台", "蒙古帝国建立"],
+      "image": {
+        "src": "assets/story/genghis/onon.webp",
+        "alt": "斡难河历史故事插图",
+        "caption": "斡难河 · 忽里勒台"
+      },
       "importance": 5
     },
     {
@@ -64,6 +74,11 @@
       "summary": "成吉思汗多次进攻西夏，迫使其臣服并提供军力。贺兰山与黄河之间，成为蒙古南下的第一道门户。",
       "quote": "越过沙漠与山口，草原骑兵第一次把锋芒压向农耕王国。",
       "works": ["西夏战事", "贺兰山门户"],
+      "image": {
+        "src": "assets/story/genghis/xingqing-early.webp",
+        "alt": "兴庆历史故事插图",
+        "caption": "兴庆 · 西夏战事"
+      },
       "importance": 4
     },
     {
@@ -76,6 +91,11 @@
       "summary": "蒙古军在金朝北部防线取得决定性突破。野狐岭一带的胜利，打开了通往华北平原的通道。",
       "quote": "山岭和长城不再只是屏障，也成为速度与机动的试炼场。",
       "works": ["攻金战役", "北方防线"],
+      "image": {
+        "src": "assets/story/genghis/yehuling.webp",
+        "alt": "野狐岭历史故事插图",
+        "caption": "野狐岭 · 攻金战役"
+      },
       "importance": 4
     },
     {
@@ -88,6 +108,11 @@
       "summary": "蒙古军攻陷金朝中都，金廷南迁后的政治重心被迫转移。草原帝国由此深度卷入华北世界。",
       "quote": "中都陷落，华北秩序被迫重新排列。",
       "works": ["中都之役", "金朝南迁"],
+      "image": {
+        "src": "assets/story/genghis/zhongdu.webp",
+        "alt": "中都历史故事插图",
+        "caption": "中都 · 中都之役"
+      },
       "importance": 5
     },
     {
@@ -100,6 +125,11 @@
       "summary": "哲别追击乃蛮残部，西辽政权瓦解。蒙古势力抵达七河地区，终于与花剌子模世界接壤。",
       "quote": "丝路东段归入蒙古视野，西征的地平线由此打开。",
       "works": ["西辽瓦解", "七河地区"],
+      "image": {
+        "src": "assets/story/genghis/balasagun.webp",
+        "alt": "八剌沙衮历史故事插图",
+        "caption": "八剌沙衮 · 西辽瓦解"
+      },
       "importance": 4
     },
     {
@@ -112,6 +142,11 @@
       "summary": "讹答剌事件点燃了对花剌子模的全面战争。商队与使节被杀后，成吉思汗亲率大军西进。",
       "quote": "一座边城的屠杀，把草原怒火引向河中绿洲。",
       "works": ["讹答剌事件", "花剌子模战争"],
+      "image": {
+        "src": "assets/story/genghis/otrar.webp",
+        "alt": "讹答剌历史故事插图",
+        "caption": "讹答剌 · 讹答剌事件"
+      },
       "importance": 5
     },
     {
@@ -124,6 +159,11 @@
       "summary": "成吉思汗穿越克孜勒库姆沙漠，突入布哈拉。河中名城的陷落展示了蒙古军远程机动和围城能力。",
       "quote": "沙漠没有挡住骑兵，绿洲也没能守住城门。",
       "works": ["布哈拉陷落", "穿越克孜勒库姆"],
+      "image": {
+        "src": "assets/story/genghis/bukhara.webp",
+        "alt": "布哈拉历史故事插图",
+        "caption": "布哈拉 · 布哈拉陷落"
+      },
       "importance": 5
     },
     {
@@ -136,6 +176,11 @@
       "summary": "撒马尔罕是花剌子模的核心城市之一。其陷落标志着河中地区的政治与军事结构被迅速击穿。",
       "quote": "帝国中心城市在短时间内相继失守，速度本身成为震慑。",
       "works": ["撒马尔罕陷落", "河中战局"],
+      "image": {
+        "src": "assets/story/genghis/samarkand.webp",
+        "alt": "撒马尔罕历史故事插图",
+        "caption": "撒马尔罕 · 撒马尔罕陷落"
+      },
       "importance": 5
     },
     {
@@ -148,6 +193,11 @@
       "summary": "花剌子模旧都玉龙杰赤经历漫长围攻，最终陷落。这里显示了蒙古西征中最残酷的城市战面貌。",
       "quote": "在阿姆河下游，征服从疾驰变成漫长而沉重的围城。",
       "works": ["玉龙杰赤围城", "阿姆河下游"],
+      "image": {
+        "src": "assets/story/genghis/gurganj.webp",
+        "alt": "玉龙杰赤历史故事插图",
+        "caption": "玉龙杰赤 · 玉龙杰赤围城"
+      },
       "importance": 4
     },
     {
@@ -160,6 +210,11 @@
       "summary": "札兰丁一路南退，在印度河畔与蒙古军决战后渡河逃入印度。西征的锋线几乎抵达南亚边缘。",
       "quote": "追击抵达大河之前，欧亚腹地已被重新接通。",
       "works": ["印度河之战", "追击札兰丁"],
+      "image": {
+        "src": "assets/story/genghis/indus.webp",
+        "alt": "印度河历史故事插图",
+        "caption": "印度河 · 印度河之战"
+      },
       "importance": 4
     },
     {
@@ -172,6 +227,11 @@
       "summary": "西征归来后，成吉思汗再次攻西夏，并在战事末期去世。征服者的生命终点，仍在贺兰山与黄河之间。",
       "quote": "他从草原出发，又在西夏战场的阴影中结束一生。",
       "works": ["最后西夏战役", "1227 年去世"],
+      "image": {
+        "src": "assets/story/genghis/xingqing-final.webp",
+        "alt": "兴庆历史故事插图",
+        "caption": "兴庆 · 最后西夏战役"
+      },
       "importance": 5
     }
   ]

@@ -348,6 +348,7 @@ function selectPoint(index, fly) {
   document.getElementById("storyTitle").textContent = `${point.name} · ${typeLabel(point.type)}`;
   document.getElementById("storyText").textContent = point.summary;
   document.getElementById("storyWorks").innerHTML = point.works.map((work) => `<span>${work}</span>`).join("");
+  renderStoryImage(point);
   document.getElementById("storyQuote").textContent = point.quote;
   document.getElementById("poemOpen").hidden = !poem;
   document.getElementById("progressText").textContent = `第 ${activeIndex + 1} / ${points.length} 站`;
@@ -367,6 +368,25 @@ function selectPoint(index, fly) {
       essential: true
     });
   }
+}
+
+function renderStoryImage(point) {
+  const figure = document.getElementById("storyImage");
+  const image = document.getElementById("storyImageAsset");
+  const caption = document.getElementById("storyImageCaption");
+  if (!point.image?.src) {
+    figure.hidden = true;
+    image.removeAttribute("src");
+    image.alt = "";
+    caption.textContent = "";
+    caption.hidden = true;
+    return;
+  }
+  image.src = point.image.src;
+  image.alt = point.image.alt || `${point.name}插图`;
+  caption.textContent = point.image.caption || "";
+  caption.hidden = !point.image.caption;
+  figure.hidden = false;
 }
 
 function poemForPoint(point) {
@@ -408,7 +428,8 @@ function selectAdjacent(direction) {
 function searchableText(point) {
   const poem = poemForPoint(point);
   const poemText = poem ? [poem.title, poem.author, ...poem.body] : [];
-  return [point.name, point.short, point.years, typeLabel(point.type), point.summary, point.quote, ...point.works, ...poemText]
+  const imageText = point.image ? [point.image.alt, point.image.caption] : [];
+  return [point.name, point.short, point.years, typeLabel(point.type), point.summary, point.quote, ...point.works, ...poemText, ...imageText]
     .join(" ")
     .toLowerCase();
 }

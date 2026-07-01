@@ -41,6 +41,11 @@
       "quote": "蜀道之难，难于上青天。",
       "works": ["蜀道难"],
       "poem": "蜀道难",
+      "image": {
+        "src": "assets/story/libai/qinglian.webp",
+        "alt": "青莲历史故事插图",
+        "caption": "青莲 · 蜀道难"
+      },
       "importance": 5
     },
     {
@@ -54,6 +59,11 @@
       "quote": "峨眉山月半轮秋，影入平羌江水流。",
       "works": ["峨眉山月歌"],
       "poem": "峨眉山月歌",
+      "image": {
+        "src": "assets/story/libai/emei.webp",
+        "alt": "峨眉历史故事插图",
+        "caption": "峨眉 · 峨眉山月歌"
+      },
       "importance": 4
     },
     {
@@ -67,6 +77,11 @@
       "quote": "夜发清溪向三峡，思君不见下渝州。",
       "works": ["峨眉山月歌"],
       "poem": "峨眉山月歌",
+      "image": {
+        "src": "assets/story/libai/yuzhou.webp",
+        "alt": "渝州历史故事插图",
+        "caption": "渝州 · 峨眉山月歌"
+      },
       "importance": 4
     },
     {
@@ -80,6 +95,11 @@
       "quote": "朝辞白帝彩云间，千里江陵一日还。",
       "works": ["早发白帝城"],
       "poem": "早发白帝城",
+      "image": {
+        "src": "assets/story/libai/jiangling.webp",
+        "alt": "江陵历史故事插图",
+        "caption": "江陵 · 早发白帝城"
+      },
       "importance": 4
     },
     {
@@ -93,6 +113,11 @@
       "quote": "三山半落青天外，二水中分白鹭洲。",
       "works": ["登金陵凤凰台"],
       "poem": "登金陵凤凰台",
+      "image": {
+        "src": "assets/story/libai/jinling.webp",
+        "alt": "金陵历史故事插图",
+        "caption": "金陵 · 登金陵凤凰台"
+      },
       "importance": 5
     },
     {
@@ -106,6 +131,11 @@
       "quote": "故人西辞黄鹤楼，烟花三月下扬州。",
       "works": ["黄鹤楼送孟浩然之广陵"],
       "poem": "黄鹤楼送孟浩然之广陵",
+      "image": {
+        "src": "assets/story/libai/yangzhou.webp",
+        "alt": "扬州历史故事插图",
+        "caption": "扬州 · 黄鹤楼送孟浩然之广陵"
+      },
       "importance": 4
     },
     {
@@ -119,6 +149,11 @@
       "quote": "桃花流水窅然去，别有天地非人间。",
       "works": ["山中问答"],
       "poem": "山中问答",
+      "image": {
+        "src": "assets/story/libai/anlu.webp",
+        "alt": "安陆历史故事插图",
+        "caption": "安陆 · 山中问答"
+      },
       "importance": 4
     },
     {
@@ -132,6 +167,11 @@
       "quote": "云想衣裳花想容，春风拂槛露华浓。",
       "works": ["清平调"],
       "poem": "清平调·其一",
+      "image": {
+        "src": "assets/story/libai/changan.webp",
+        "alt": "长安历史故事插图",
+        "caption": "长安 · 清平调"
+      },
       "importance": 5
     },
     {
@@ -145,6 +185,11 @@
       "quote": "醉月频中圣，迷花不事君。",
       "works": ["赠孟浩然"],
       "poem": "赠孟浩然",
+      "image": {
+        "src": "assets/story/libai/luoyang.webp",
+        "alt": "洛阳历史故事插图",
+        "caption": "洛阳 · 赠孟浩然"
+      },
       "importance": 5
     },
     {
@@ -158,6 +203,11 @@
       "quote": "鲁酒不可醉，齐歌空复情。",
       "works": ["沙丘城下寄杜甫"],
       "poem": "沙丘城下寄杜甫",
+      "image": {
+        "src": "assets/story/libai/yanzhou.webp",
+        "alt": "兖州历史故事插图",
+        "caption": "兖州 · 沙丘城下寄杜甫"
+      },
       "importance": 3
     },
     {
@@ -171,6 +221,11 @@
       "quote": "桃花潭水深千尺，不及汪伦送我情。",
       "works": ["赠汪伦"],
       "poem": "赠汪伦",
+      "image": {
+        "src": "assets/story/libai/xuancheng.webp",
+        "alt": "宣城历史故事插图",
+        "caption": "宣城 · 赠汪伦"
+      },
       "importance": 5
     },
     {
@@ -184,6 +239,11 @@
       "quote": "飞流直下三千尺，疑是银河落九天。",
       "works": ["望庐山瀑布"],
       "poem": "望庐山瀑布",
+      "image": {
+        "src": "assets/story/libai/lushan.webp",
+        "alt": "庐山历史故事插图",
+        "caption": "庐山 · 望庐山瀑布"
+      },
       "importance": 5
     },
     {
@@ -197,6 +257,11 @@
       "quote": "我寄愁心与明月，随君直到夜郎西。",
       "works": ["闻王昌龄左迁龙标遥有此寄"],
       "poem": "闻王昌龄左迁龙标遥有此寄",
+      "image": {
+        "src": "assets/story/libai/yelang.webp",
+        "alt": "夜郎道历史故事插图",
+        "caption": "夜郎道 · 闻王昌龄左迁龙标遥有此寄"
+      },
       "importance": 4
     },
     {
@@ -210,6 +275,11 @@
       "quote": "两岸猿声啼不住，轻舟已过万重山。",
       "works": ["早发白帝城"],
       "poem": "早发白帝城",
+      "image": {
+        "src": "assets/story/libai/baidicheng.webp",
+        "alt": "白帝城历史故事插图",
+        "caption": "白帝城 · 早发白帝城"
+      },
       "importance": 5
     },
     {
@@ -223,6 +293,11 @@
       "quote": "大鹏飞兮振八裔，中天摧兮力不济。",
       "works": ["临路歌"],
       "poem": "临路歌",
+      "image": {
+        "src": "assets/story/libai/dangtu.webp",
+        "alt": "当涂历史故事插图",
+        "caption": "当涂 · 临路歌"
+      },
       "importance": 5
     }
   ]

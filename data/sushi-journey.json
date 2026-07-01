@@ -37,6 +37,11 @@
       "quote": "粗缯大布裹生涯，腹有诗书气自华。",
       "works": ["和董传留别"],
       "poem": "和董传留别",
+      "image": {
+        "src": "assets/story/sushi/meishan.webp",
+        "alt": "眉山历史故事插图",
+        "caption": "眉山 · 和董传留别"
+      },
       "importance": 5
     },
     {
@@ -50,6 +55,11 @@
       "quote": "人生到处知何似，应似飞鸿踏雪泥。",
       "works": ["和子由渑池怀旧"],
       "poem": "和子由渑池怀旧",
+      "image": {
+        "src": "assets/story/sushi/kaifeng.webp",
+        "alt": "汴京历史故事插图",
+        "caption": "汴京 · 和子由渑池怀旧"
+      },
       "importance": 5
     },
     {
@@ -63,6 +73,11 @@
       "quote": "此心安处是吾乡。",
       "works": ["初到黄州"],
       "poem": "定风波·南海归赠王定国侍人寓娘",
+      "image": {
+        "src": "assets/story/sushi/fengxiang.webp",
+        "alt": "凤翔历史故事插图",
+        "caption": "凤翔 · 初到黄州"
+      },
       "importance": 3
     },
     {
@@ -76,6 +91,11 @@
       "quote": "欲把西湖比西子，淡妆浓抹总相宜。",
       "works": ["饮湖上初晴后雨"],
       "poem": "饮湖上初晴后雨",
+      "image": {
+        "src": "assets/story/sushi/hangzhou.webp",
+        "alt": "杭州历史故事插图",
+        "caption": "杭州 · 饮湖上初晴后雨"
+      },
       "importance": 5
     },
     {
@@ -89,6 +109,11 @@
       "quote": "会挽雕弓如满月，西北望，射天狼。",
       "works": ["江城子·密州出猎"],
       "poem": "江城子·密州出猎",
+      "image": {
+        "src": "assets/story/sushi/mizhou.webp",
+        "alt": "密州历史故事插图",
+        "caption": "密州 · 江城子·密州出猎"
+      },
       "importance": 4
     },
     {
@@ -102,6 +127,11 @@
       "quote": "明月如霜，好风如水，清景无限。",
       "works": ["永遇乐·彭城夜宿燕子楼"],
       "poem": "永遇乐·彭城夜宿燕子楼",
+      "image": {
+        "src": "assets/story/sushi/xuzhou.webp",
+        "alt": "徐州历史故事插图",
+        "caption": "徐州 · 永遇乐·彭城夜宿燕子楼"
+      },
       "importance": 4
     },
     {
@@ -115,6 +145,11 @@
       "quote": "拣尽寒枝不肯栖，寂寞沙洲冷。",
       "works": ["卜算子·黄州定慧院寓居作"],
       "poem": "卜算子·黄州定慧院寓居作",
+      "image": {
+        "src": "assets/story/sushi/huzhou.webp",
+        "alt": "湖州历史故事插图",
+        "caption": "湖州 · 卜算子·黄州定慧院寓居作"
+      },
       "importance": 4
     },
     {
@@ -128,6 +163,11 @@
       "quote": "大江东去，浪淘尽，千古风流人物。",
       "works": ["念奴娇·赤壁怀古", "赤壁赋", "后赤壁赋", "定风波"],
       "poem": "念奴娇·赤壁怀古",
+      "image": {
+        "src": "assets/story/sushi/huangzhou.webp",
+        "alt": "黄州历史故事插图",
+        "caption": "黄州 · 念奴娇·赤壁怀古"
+      },
       "importance": 5
     },
     {
@@ -141,6 +181,11 @@
       "quote": "日啖荔枝三百颗，不辞长作岭南人。",
       "works": ["惠州一绝"],
       "poem": "惠州一绝",
+      "image": {
+        "src": "assets/story/sushi/huizhou.webp",
+        "alt": "惠州历史故事插图",
+        "caption": "惠州 · 惠州一绝"
+      },
       "importance": 5
     },
     {
@@ -154,6 +199,11 @@
       "quote": "九死南荒吾不恨，兹游奇绝冠平生。",
       "works": ["六月二十日夜渡海"],
       "poem": "六月二十日夜渡海",
+      "image": {
+        "src": "assets/story/sushi/danzhou.webp",
+        "alt": "儋州历史故事插图",
+        "caption": "儋州 · 六月二十日夜渡海"
+      },
       "importance": 5
     },
     {
@@ -167,6 +217,11 @@
       "quote": "问汝平生功业，黄州惠州儋州。",
       "works": ["自题金山画像"],
       "poem": "自题金山画像",
+      "image": {
+        "src": "assets/story/sushi/changzhou.webp",
+        "alt": "常州历史故事插图",
+        "caption": "常州 · 自题金山画像"
+      },
       "importance": 5
     }
   ]
